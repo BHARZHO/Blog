@@ -1,31 +1,43 @@
-﻿@model IEnumerable<BlogApp.ViewModels.BlogViewModel.BlogViewModel>
+﻿@model IEnumerable<BlogApp.ViewModels.BlogViewModel.BlogPostViewModel>
 
 @{
-    ViewData["Title"] = "All Posts";
+    ViewData["Title"] = "Index";
 }
 
-<div class="album py-5 bg-body-tertiary">
-    <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            @foreach (var blog in Model)
-            {
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                        <div class="card-body">
-                            <p class="card-text">@blog.Name</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" asp-action="Edit">Edit</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" asp-action="Delete">Delete</button>
-                                </div>
-                                <small class="text-body-secondary">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
-    </div>
-</div>
+<h1>All Blog Posts</h1>
+
+<a class="btn btn-primary" href="@Url.ActionLink("Create","Admin")">
+    Create Blog
+</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Author</th>
+            <th>Body</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var post in Model)
+        {
+            <tr>
+                <td>@post.Name</td>
+                <td>@post.Body</td>
+                <td>@post.dateTime</td>
+                <td>
+                    <a class="btn btn-warning" asp-controller="Admin" asp-action="Edit" asp-route-id="@post.Name">Update</a>
+                    <a class="btn btn-danger" asp-controller="Admin" asp-action="Delete" asp-route-id="@post.Name">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
+
+
 

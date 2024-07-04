@@ -33,7 +33,7 @@ public class AuthController(SignInManager<User> signInManager, UserManager<User>
                 if (result.Succeeded)
                 {
                     _notyfService.Success("Login succesful");
-                    return RedirectToAction("Create", "Admin");
+                    return RedirectToAction("Index", "Admin");
                 }
             }
 
@@ -105,7 +105,7 @@ public class AuthController(SignInManager<User> signInManager, UserManager<User>
 
             user.UserName = model.Username;
             user.Email = model.Email;
-            user.PhoneNumber = model.Phone;
+            //user.PhoneNumber = model.Phone;
 
             var result = await _userManager.UpdateAsync(user);
 

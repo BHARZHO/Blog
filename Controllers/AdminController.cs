@@ -33,7 +33,7 @@ public class AdminController : Controller
     public async Task<IActionResult> Create(CreateBlogViewModel model)
     {
         await _admin.Create(model);
-        return RedirectToAction("Index", "home");
+        return RedirectToAction("Index", "Admin");
     }
     [HttpGet]
     public IActionResult Edit()
@@ -55,7 +55,7 @@ public class AdminController : Controller
         return View();
     }
     [HttpGet]
-    public IActionResult Delete()
+    public IActionResult Delete(Guid id)
     {
         return View();
     }

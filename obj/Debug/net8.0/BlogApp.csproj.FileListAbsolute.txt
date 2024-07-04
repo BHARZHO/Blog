@@ -136,3 +136,4 @@ C:\Users\USER\OneDrive\Desktop\My Attempt\BlogApp\obj\Debug\net8.0\BlogApp.genru
 C:\Users\USER\OneDrive\Desktop\My Attempt\BlogApp\obj\Debug\net8.0\ref\BlogApp.dll
 C:\Users\USER\OneDrive\Desktop\My Attempt\BlogApp\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\USER\OneDrive\Desktop\My Attempt\BlogApp\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\USER\OneDrive\Desktop\My Attempt\BlogApp\obj\Debug\net8.0\BlogApp.sourcelink.json

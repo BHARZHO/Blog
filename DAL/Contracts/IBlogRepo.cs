@@ -5,7 +5,7 @@ namespace BlogApp.DAL.Contracts;
 
 public interface IBlogRepo
 {
-Task<IEnumerable<BlogViewModel>>? GetBlog();
+Task<IEnumerable<BlogPostViewModel>>? GetBlog();
 // get all blogs
-Task<BlogViewModel?> GetBlog(Guid id);
+Task<BlogPostViewModel?> GetBlog(Guid id);
 }

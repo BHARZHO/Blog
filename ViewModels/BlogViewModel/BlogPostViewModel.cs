@@ -2,7 +2,7 @@
 
 namespace BlogApp.ViewModels.BlogViewModel;
 
-public class BlogViewModel
+public class BlogPostViewModel
 {
     public required string Name { get; set; }
     public required string Body { get; set; }

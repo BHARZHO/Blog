@@ -1,5 +1,5 @@
 ﻿namespace BlogApp.ViewModels.BlogViewModel;
 class BlogIndexList
 {
-    public IEnumerable<BlogViewModel> Blogs { get; set; } = default!;
+    public IEnumerable<BlogPostViewModel> Blogs { get; set; } = default!;
 }

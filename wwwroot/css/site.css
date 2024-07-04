@@ -40,7 +40,7 @@ body {
     height: 80px;
     width: 80px;
     border-radius: 50%;
-    background-color: #2879f3;
+    background-color: white;
     position: absolute;
     top: 0;
     left: 0;
@@ -50,7 +50,7 @@ body {
     height: 80px;
     width: 80px;
     border-radius: 50%;
-    background-color: #f37e10;
+    background-color: blue;
     position: absolute;
     right: 0;
     bottom: 0;

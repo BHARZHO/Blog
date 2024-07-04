@@ -9,12 +9,12 @@ namespace BlogApp.DAL.Repository
     {
         private readonly ApplicationDbContext applicationDbContext = applicationDbContext;
 
-        public async Task<IEnumerable<BlogViewModel>>? GetBlog()
+        public async Task<IEnumerable<BlogPostViewModel>>? GetBlog()
         {
             var result = await applicationDbContext.Blogs.Include(e => e.Author).AsNoTracking().ToListAsync();
             if (result != null)
             {
-                var viewresult = result.Select(e => new BlogViewModel(
+                var viewresult = result.Select(e => new BlogPostViewModel(
 
             )
                 {
@@ -28,13 +28,13 @@ namespace BlogApp.DAL.Repository
             return null!;
         }
 
-        public async Task<BlogViewModel?> GetBlog(Guid id)
+        public async Task<BlogPostViewModel?> GetBlog(Guid id)
         {
             var result = await applicationDbContext.Blogs.Include(e => e.Author).FirstOrDefaultAsync(e => e.ID == id);
             if (result != null)
             {
 
-                var viewreult = new BlogViewModel()
+                var viewreult = new BlogPostViewModel()
                 {
                     AuthorName = result.Author.Name,
                     Body = result.Body,

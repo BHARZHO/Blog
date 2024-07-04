@@ -15,7 +15,7 @@ public class EditView
     [Required(ErrorMessage = "Password is required!")]
     [DataType(DataType.Password)]
     public required string Password { get; set; }
-    [DataType(DataType.PhoneNumber)]
-    [DisplayName("Phone Number")]
-    public required string Phone { get; set; }
+    //[DataType(DataType.PhoneNumber)]
+    //[DisplayName("Phone Number")]
+    //public required string Phone { get; set; }
 }

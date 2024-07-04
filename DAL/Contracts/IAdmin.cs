@@ -2,7 +2,7 @@
 
 namespace BlogApp.DAL.Contracts;
 
-public interface IAdmin : IBase<BlogViewModel, CreateBlogViewModel, EditBlogViewModel>
+public interface IAdmin : IBase<BlogPostViewModel, CreateBlogViewModel, EditBlogViewModel>
 {
 
 }

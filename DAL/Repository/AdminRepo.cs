@@ -45,7 +45,7 @@ namespace BlogApp.DAL.Repository;
                 {
                     ID = Guid.NewGuid(),
                     Body = createEntity.Body,
-                    Name = createEntity.Name,
+                    Name = createEntity.BlogName,
                     Status = createEntity.Status,
                     DateCreated = DateTime.Now,
                     AuthorId = author.Id
@@ -78,7 +78,7 @@ namespace BlogApp.DAL.Repository;
                     {
                         ID = Guid.NewGuid(),
                         Body = createEntity.Body,
-                        Name = createEntity.Name,
+                        Name = createEntity.BlogName,
                         Status = createEntity.Status,
                         DateCreated = DateTime.Now,
                         AuthorId = author.Id
@@ -97,7 +97,7 @@ namespace BlogApp.DAL.Repository;
 
         }
 
-        public async Task<IEnumerable<BlogViewModel>?> GetAll()
+        public async Task<IEnumerable<BlogPostViewModel>?> GetAll()
         {
             var blogs = await _blogRepo.GetBlog()!;
 
@@ -105,7 +105,7 @@ namespace BlogApp.DAL.Repository;
 
         }
 
-        public async Task<BlogViewModel?> GetById(Guid Id)
+        public async Task<BlogPostViewModel?> GetById(Guid Id)
         {
             var blog = await _blogRepo.GetBlog(Id);
             return blog;
