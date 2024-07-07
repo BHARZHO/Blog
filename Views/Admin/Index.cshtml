@@ -1,0 +1,51 @@
+﻿@model IEnumerable<BlogApplication.ViewModels.BlogViewModel.BlogPostViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Blog Posts</h1>
+
+<a class="btn btn-primary" href="@Url.ActionLink("Create","Admin")">
+    Create Blog
+</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date Created</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count() != 0)
+        {
+        @foreach (var post in Model)
+        {
+            <tr>
+
+                <td class="title">
+
+                    <a asp-controller="Admin" asp-action="Details" asp-route-id="@post.Id">@post.Name</a>
+
+                </td>
+                <td>@post.dateTime</td>
+                
+            </tr>
+        }
+        }
+        else
+            {
+                <h3>No Blog Available</h3>
+            }
+        
+    </tbody>
+</table>
+
+
+
+
+
+
+
+

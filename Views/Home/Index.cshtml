@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        Welcome to a simple blog application
+        Welcome to our cozy corner of the internet, where stories come alive and dreams take flight. Grab a cup of coffee, settle in, and let's journey together
+    </h1>
+    <a class="btn btn-primary" href="@Url.ActionLink("Create","Admin")">
+        Create Blog
+    </a>
+    <a class="btn btn-primary" href="@Url.ActionLink("Index","Admin")">
+        View All Blog
+    </a>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

@@ -1,0 +1,19 @@
+﻿@model BlogApplication.ViewModels.BlogViewModel.EditBlogViewModel
+
+
+@{
+    ViewData["Title"] = "Edit Blog";
+}
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for='Name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Body" class="form-label"></label>
+        <textarea id="" cols="30" rows="2" asp-for="Body"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">
+        Edit Blog
+    </button>
+</form>

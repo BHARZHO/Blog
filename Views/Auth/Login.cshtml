@@ -1,0 +1,27 @@
+﻿@model BlogApplication.ViewModels.AuthViewModel.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<form method="post" asp-action="Login">
+    <div class="card-container">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="container">
+            <div class="log-card">
+                <p class="heading">Welcome Back</p>
+                <p>We are you to have you Again</p>
+                <div class="input-group">
+                    <label asp-for="Username" class="text">Username</label>
+                    <input class="input" type="username" placeholder="For Ex: bharzho" asp-for="Username">
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                    <label asp-for="Password" class="text">Password</label>
+                    <input class="input" type="password" placeholder="Enter Password" asp-for="Password">
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <button class="btn">Sign In</button>
+                <p class="no-account">Don't Have an Account ?<a class="link" asp-action="Register" asp-controller="Auth"> Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+</form>

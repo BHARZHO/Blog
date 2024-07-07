@@ -1,0 +1,16 @@
+@model BlogApplication.ViewModels.BlogViewModel.BlogPostViewModel;
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Model.Name</h1>
+<h3>
+@Html.Raw(Model.Body)    
+</h3>
+<h6>@Model.dateTime</h6>
+
+<td>
+    <a class="btn btn-warning" asp-controller="Admin" asp-action="Edit" asp-route-id="@Model.Id">Update</a>
+    <a class="btn btn-danger" asp-controller="Admin" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+</td>
